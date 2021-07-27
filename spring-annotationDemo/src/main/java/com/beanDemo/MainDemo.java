@@ -13,10 +13,10 @@ import java.util.Date;
 
 /**
  * 功能描述: 定义一个普通的bean
- * @Param: 
+ * @Param:
  * @Return: 
  * @Author: zhangzibin
- * @Date: 2021/7/27 16:34
+ * @Date: 2021/7/27 17:52
  */
 public class MainDemo {
     private static AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
