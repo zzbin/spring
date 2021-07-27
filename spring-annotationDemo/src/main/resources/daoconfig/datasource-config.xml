@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="druid.driverClassName">org.postgresql.Driver</entry>
+    <entry key="druid.url">jdbc:postgresql://172.22.26.229:5432/limsdev</entry>
+    <entry key="druid.username">dev</entry>
+    <entry key="druid.password">dev123</entry>
+
+</properties>

@@ -1,0 +1,5 @@
+druid:
+  driverClassName: org.postgresql.Driver
+  url: jdbc:postgresql://172.22.26.229:5432/limsdev
+  username: dev
+  password: dev123

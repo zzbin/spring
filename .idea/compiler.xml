@@ -8,9 +8,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springboot-hello" />
+        <module name="spring-annotationDemo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="spring-annotationDemo" target="1.8" />
       <module name="springboot-hello" target="1.8" />
     </bytecodeTargetLevel>
   </component>
