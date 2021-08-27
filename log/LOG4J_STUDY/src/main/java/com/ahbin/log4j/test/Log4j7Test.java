@@ -13,12 +13,14 @@ public class Log4j7Test {
            日志太多了，不方便管理和维护怎么办
            FileAppender为我们提供了好用的子类来进一步的对于文件输出进行处理
         */
-        Logger logger = Logger.getLogger(Log4j7Test.class);
-        logger.fatal("fatal 信息");
-        logger.error("error 信息");
-        logger.warn("warn 信息");
-        logger.info("info 信息");
-        logger.debug("debug 信息");
-        logger.trace("trace 信息");
+        for (int i = 0; i < 10000; i++) {
+            Logger logger = Logger.getLogger(Log4j7Test.class);
+            logger.fatal("fatal 信息");
+            logger.error("error 信息");
+            logger.warn("warn 信息");
+            logger.info("info 信息");
+            logger.debug("debug 信息");
+            logger.trace("trace 信息");
+        }
     }
 }
