@@ -3,8 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/log/JUL_STUDY/JUL_STUDY.iml" filepath="$PROJECT_DIR$/log/JUL_STUDY/JUL_STUDY.iml" />
+      <module fileurl="file://$PROJECT_DIR$/log/JUL_STUDY/JUL_STUDY1.iml" filepath="$PROJECT_DIR$/log/JUL_STUDY/JUL_STUDY1.iml" />
       <module fileurl="file://$PROJECT_DIR$/log/LOG4J_STUDY/LOG4J_STUDY.iml" filepath="$PROJECT_DIR$/log/LOG4J_STUDY/LOG4J_STUDY.iml" />
       <module fileurl="file://$PROJECT_DIR$/../java8/Java8inActionSourceCode/Java8InAction-master/lambdasinaction.iml" filepath="$PROJECT_DIR$/../java8/Java8inActionSourceCode/Java8InAction-master/lambdasinaction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/log/LOG4J_STUDY/log4j-study.iml" filepath="$PROJECT_DIR$/log/LOG4J_STUDY/log4j-study.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-annotationDemo/spring-annotationDemo.iml" filepath="$PROJECT_DIR$/spring-annotationDemo/spring-annotationDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/shangGG/spring5_demo1/spring5_demo1.iml" filepath="$PROJECT_DIR$/shangGG/spring5_demo1/spring5_demo1.iml" />
       <module fileurl="file://$PROJECT_DIR$/shangGG/spring5_demo2/spring5_demo2.iml" filepath="$PROJECT_DIR$/shangGG/spring5_demo2/spring5_demo2.iml" />
