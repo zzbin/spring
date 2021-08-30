@@ -8,16 +8,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="lambdasinaction" />
-        <module name="jcl-study" />
+        <module name="slf4j-temp" />
         <module name="spring-annotationDemo" />
-        <module name="LOG4J_STUDY" />
         <module name="springboot-hello" />
+        <module name="LOG4J_STUDY" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="jcl-study" target="1.5" />
       <module name="lambdasinaction" target="1.8" />
       <module name="LOG4J_STUDY" target="1.5" />
+      <module name="slf4j-temp" target="1.5" />
       <module name="spring-annotationDemo" target="1.5" />
       <module name="springboot-hello" target="1.6" />
     </bytecodeTargetLevel>

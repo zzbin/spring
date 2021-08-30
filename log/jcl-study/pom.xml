@@ -6,7 +6,11 @@
 
     <groupId>com.ahbin.study</groupId>
     <artifactId>jcl-study</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>../slf4j-temp</module>
+    </modules>
 
     <dependencies>
         <dependency>
