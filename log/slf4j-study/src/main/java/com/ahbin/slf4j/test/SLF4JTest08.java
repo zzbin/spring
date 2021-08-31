@@ -5,7 +5,7 @@ import org.apache.log4j.Logger;
 import org.junit.Test;
 
 
-public class SLF4JTest08 {
+public class  SLF4JTest08 {
 
     /*
         集成JDK14(JUL)
