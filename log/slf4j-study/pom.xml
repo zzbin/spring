@@ -15,11 +15,29 @@
             <version>4.13</version>
         </dependency>
         <!-- slf4j 核心依赖  -->
-        <!--        <dependency>-->
-        <!--            <groupId>org.slf4j</groupId>-->
-        <!--            <artifactId>slf4j-api</artifactId>-->
-        <!--            <version>1.7.25</version>-->
-        <!--        </dependency>-->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.25</version>
+        </dependency>
+        <!--  导入log4j 适配器依赖-->
+<!--        <dependency>-->
+<!--            <groupId>org.slf4j</groupId>-->
+<!--            <artifactId>slf4j-log4j12</artifactId>-->
+<!--            <version>1.7.25</version>-->
+<!--        </dependency>-->
+        <!--  slf4j-log4j桥接器     -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>log4j-over-slf4j</artifactId>
+            <version>1.7.25</version>
+        </dependency>
+        <!-- 集成logback-->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.3</version>
+        </dependency>
         <!-- slf4j 自带的简单日志实现  -->
         <!--        <dependency>-->
         <!--            <groupId>org.slf4j</groupId>-->
@@ -32,18 +50,7 @@
         <!--            <artifactId>slf4j-nop</artifactId>-->
         <!--            <version>1.7.25</version>-->
         <!--        </dependency>-->
-        <!--        &lt;!&ndash; 集成logback&ndash;&gt;-->
-        <!--        <dependency>-->
-        <!--            <groupId>ch.qos.logback</groupId>-->
-        <!--            <artifactId>logback-classic</artifactId>-->
-        <!--            <version>1.2.3</version>-->
-        <!--        </dependency>-->
-        <!--        导入log4j 适配器依赖-->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <version>1.7.25</version>
-        </dependency>
+
         <!--        &lt;!&ndash;        导入log4j 依赖&ndash;&gt;-->
         <!--        <dependency>-->
         <!--            <groupId>log4j</groupId>-->
