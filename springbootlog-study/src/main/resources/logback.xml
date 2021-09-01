@@ -27,7 +27,7 @@
     <!--
        配置文件的输出路径
    -->
-    <property name="logDir" value="E://project//study//log//logback-study"></property>
+    <property name="logDir" value="/Users/ahbin/project/study/springbootlog-study/springbootlog.log"></property>
     <!--
            配置文件的appender 可拆分归档的文件
        -->
@@ -133,9 +133,9 @@
 <!--        <appender-ref ref="consoleAppender"></appender-ref>-->
 <!--        <appender-ref ref="fileAppender"></appender-ref>-->
 <!--        <appender-ref ref="htmlFileAppender"></appender-ref>-->
-<!--        <appender-ref ref="rollingFileAppender"></appender-ref>-->
+        <appender-ref ref="rollingFileAppender"></appender-ref>
 <!--        <appender-ref ref="consoleFilterAppender"></appender-ref>-->
-        <appender-ref ref="asynAppender"></appender-ref>
+<!--        <appender-ref ref="asynAppender"></appender-ref>-->
     </root>
     <!--
         自定义logger
