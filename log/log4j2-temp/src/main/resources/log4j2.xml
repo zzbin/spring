@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--status="debug" monitorInterval="5"-->
+<Configuration xmlns="http://logging.apache.org/log4j/2.0/config">
+    <!--配置全局通用属性-->
+    <Properties>
+        <Property name="logDir">/Users/ahbin/project/study/log/log4j2-temp</Property>
+        <Property name="pattern">[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} %c %M %L %thread %m%n</Property>
+    </Properties>
+    <!--配置appender-->
+    <Appenders>
+        <!--配置控制台输出-->
+        <Console name="consoleAppender" target="SYSTEM_OUT">
+        </Console>
+        <!--配置文件输出-->
+        <File name="fileAppender" fileName="${logDir}//log4j2.log">
+            <!--配置文件输出-->
+            <PatternLayout pattern="${pattern}"></PatternLayout>
+        </File>
+        <!--
+            按照指定规则来拆分日志文件
+            fileName:日志文件的名字
+            filePattern:日志文件拆分后文件的命名规则
+                    $${date:yyyy-MM-dd}：根据日期当天，创建一个文件夹
+                        例如：2021-01-01这个文件夹中，记录当天的所有日志信息（拆分出来的日志放在这个文件夹中）
+                             2021-01-02这个文件夹中，记录当天的所有日志信息（拆分出来的日志放在这个文件夹中）
+                    rollog-%d{yyyy-MM-dd-HH-mm}-%i.log
+                        为文件命名的规则：%i表示序号，从0开始，目的是为了让每一份文件名字不会重复
+        -->
+        <RollingFile name="rollingFile" fileName="${logDir}//rolling.log"
+                     filePattern="${logDir}/$${date:yyyy-MM-dd}/rollog-%d{yyyy-MM-dd-HH-mm}-%i.log">
+            <!--日志消息格式-->
+            <PatternLayout pattern="${pattern}"></PatternLayout>
+            <Policies>
+                <!--在系统启动时，触发拆分规则，产生一个日志文件-->
+                <OnStartupTriggeringPolicy/>
+                <!--按照文件的大小进行拆分-->
+                <SizeBasedTriggeringPolicy size="10KB"/>
+                <!--按照时间节点进行拆分-->
+                <TimeBasedTriggeringPolicy/>
+            </Policies>
+            <!--在同一目录下，文件的个数限制，如果超出了设置的数值，则根据时间进行覆盖，新的覆盖旧的规则-->
+            <DefaulRolloverStrategy max="30"/>
+        </RollingFile>
+        <!--配置异步日志-->
+<!--        <Async name="myAsync">-->
+<!--            &lt;!&ndash;将控制台输出做异步的操作&ndash;&gt;-->
+<!--            <AppenderRef ref="consoleAppender"></AppenderRef>-->
+<!--        </Async>-->
+    </Appenders>
+
+    <!--配置logger-->
+    <Loggers>
+        <!--配置rootlogger-->
+        <Root level="trace">
+            <!--引用appender-->
+            <AppenderRef ref="consoleAppender"></AppenderRef>
+<!--            <AppenderRef ref="fileAppender"></AppenderRef>-->
+<!--            <AppenderRef ref="rollingFile"></AppenderRef>-->
+<!--            <AppenderRef ref="myAsync"></AppenderRef>-->
+        </Root>
+    </Loggers>
+</Configuration>
