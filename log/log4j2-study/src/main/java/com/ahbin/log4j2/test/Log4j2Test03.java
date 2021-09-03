@@ -1,6 +1,5 @@
 package com.ahbin.log4j2.test;
 
-import org.apache.logging.log4j.LogManager;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
