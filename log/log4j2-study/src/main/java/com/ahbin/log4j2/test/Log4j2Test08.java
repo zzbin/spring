@@ -4,17 +4,18 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class Log4j2Test07 {
+public class Log4j2Test08 {
 
     @Test
     public void test01(){
         /*
             异步日志实现
             方式2：使用AsyncLogger的方式
-                同步异步
+            混合异步：
+                可以在应用中同时使用同步日志和异步日志，这使得日志的配置及输出会更加的灵活
          */
         for (int i = 0; i < 2000; i++) {
-            Logger logger = LoggerFactory.getLogger(Log4j2Test07.class);
+            Logger logger = LoggerFactory.getLogger(Log4j2Test08.class);
             logger.error("error 信息");
             logger.warn("warn 信息");
             logger.info("info 信息");
