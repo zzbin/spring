@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<!--
+			./的形式使用相对路径,不能用
+			没有加./的形式使用相对路径,也不能用
+			使用盘符绝对路径D:/test1/html/source/css/stype.css也不能用
+			总结:
+				对于静态资源的引用,nodejs 有其独特的引用方式
+				原来使用的相对路径和绝对路径都失效了,都不能用
+		-->
+		<link href="./public/css/style.css" type="text/css" rel="stylesheet"/>
+		<script type="text/javascript" src="./public/js/fun.js"></script>
+	</head>
+	<body>
+		我是html文件中的信息
+		<button onclick="info()">点击</button>
+		<img src="./public/image/test.png"/>
+	</body>
+</html>
