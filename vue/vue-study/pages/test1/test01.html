@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Document</title>
+		<!-- 引入vue.js框架 -->
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+	</head>
+	<body>
+		<!-- 在外层标签div中引入 id属性值，将来vue.js会通过该id，找到需要操作的元素 -->
+		<div id="app">
+			<!-- 在前端页面元素的部分，其中的内容我们暂时以插值表达式的形式来呈现 -->
+			<!-- 在两对p标签中分别引入了插值表达式，相当于将p标签中的内容写活了，内容以变量的形式存在 -->
+			<p>{{str1}}</p>
+			<p>{{str1}}</p>
+		</div>
+	</body>
+	<script>
+		// 当Vue.js框架包导入进来以后，在浏览器缓存中，就已经存在了一个Vue框架的构造函数
+		//我们new出来的这个vm对象，就是页面中对于模型和视图（数据和页面元素）的整体调度者
+		var vm = new Vue({
+			el: "#app", //el元素表现的是要指定为哪个标签进行相应的vuejs的操作
+			data: {//data是vuejs中对于数据的表达，数据约定俗成的都是以json的形式来呈现的
+				"str1": "HelloWorld1",
+				"str2": "HelloWorld2",
+			}
+			
+		})
+	</script>
+</html>
