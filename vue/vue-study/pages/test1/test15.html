@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Document</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+		<style>
+			.style1{
+				color: red;
+			}
+			.style2{
+				background-color: aqua;
+			}
+			.style3{
+				font-style: italic;
+			}
+			.style4{
+				font-size: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<span :class="['style1', 'style2', 'style3', 'style4']">Hello Style</span>
+			<span :class="['style1', 'style2', 'style3', flag?'style4':'']">Hello Style2</span>
+			<span :class="['style1', 'style2', 'style3', {'style4':flag}]">Hello Style3</span>
+			<span :class="['style1', 'style2', 'style3', {'style4':flag2}]">Hello Style3</span>
+		</div>
+		
+	</body>
+	<script>
+		var vm = new Vue({
+			el: "#app", 
+			data: {
+				flag:false,
+				flag2:true,
+			},
+			methods:{
+				fun1(){
+					alert("触发外层div");
+				}
+		
+			}
+			
+		})
+	</script>
+</html>

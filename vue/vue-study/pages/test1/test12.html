@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Document</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+	
+	</head>
+	<body>
+		<div id="app">
+			<h3>{{str1}}</h3>
+			<input type="text" v-model:value="str1"/>
+		</div>
+		
+	</body>
+	<script>
+		var vm = new Vue({
+			el: "#app", 
+			data: {
+				"str1": "aaa",
+				"str2": "bbb",
+				"str3": "ccc",
+			},
+			methods:{
+				fun1(){
+					alert("触发外层div");
+				}
+		
+			}
+			
+		})
+	</script>
+</html>
