@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Document</title>
+		<!-- 引入vue.js框架 -->
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+	</head>
+	<body>
+		
+		<div id="app">
+			<p>{{currentTime | dataTimeManager}}</p>
+		</div>
+	</body>
+	<script>
+		Vue.filter("dataTimeManager", function(dateTime){
+			//取得日期时间的具体数值
+			//将年月日时分秒分别取出,格式化为2019-01-10 10:10:10
+			var y = dateTime.getFullYear();
+			var m = (dateTime.getMonth()+1+"").toString().padStart(2, "0");
+			var d = dateTime.getDate();
+			var h = dateTime.getHours().toString().padStart(2, "0");
+			var mm = dateTime.getMinutes().toString().padStart(2, "0");
+			var s = dateTime.getSeconds().toString().padStart(2, "0");
+			//在ES5中,我们必须以使用+(拼接符)的形式来对字符串进行拼接的操作
+			// return y + "-" + m + "-" + d; 
+			//在ES6中,仅仅只使用反引号"`"来解决复杂的字符串拼接的工作
+			return `${y}-${m}-${d} ${h}:${mm}:${s}`
+		});
+		var vm = new Vue({
+			el: "#app", 
+			data: {
+				"currentTime": new Date(),
+			}
+			
+		})
+	</script>
+</html>

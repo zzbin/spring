@@ -7,24 +7,21 @@
 	</head>
 	<body>
 		<div id="app">
-			<span :style="myStyle1">Hello Style</span>
-			<span :style="[myStyle1,myStyle2]">Hello Style2</span>
+			<!-- 
+				以元素 in整形数值
+			 -->
+			<p v-for="count in 10">
+				{{count}}
+			</p>
+		
 		</div>	
 	</body>
 	<script>
 		var vm = new Vue({
 			el: "#app", 
 			data: {
-				"myStyle1": {color:"red", "font-size": "30px"},
-				"myStyle2": {'font-style':"italic", "background-color": "aqua"},
-			},
-			methods:{
-				fun1(){
-					alert("触发外层div");
-				}
-		
+				
 			}
-			
 		})
 	</script>
 </html>

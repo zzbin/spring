@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Document</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<!-- 每一次遍历出来的元素，代表一个城市信息对象 -->
+			
+			<p v-for="city in cityList">
+				<!-- 对象以 .属性名的形式来取得属性值 -->
+				{{city.id}}--------{{city.name}}
+			</p>
+			<p>-------------------------分割线---------------------------</p>
+			<!-- 在以上需求的基础上，遍历所有的元素以及对应的下标 -->
+			<p v-for="(city,index) in cityList" :key="city.id">
+				{{index}}:{{city.id}}--------{{city.name}}
+			</p>
+		</div>	
+	</body>
+	<script>
+		var vm = new Vue({
+			el: "#app", 
+			data: {
+				"cityList": [{id:'A0001',name:"北京"},
+				{id:'A0002',name:"上海"},
+				{id:'A0003',name:"广州"},
+				{id:'A0004',name:"深圳"},
+				{id:'A0005',name:"沈阳"}],
+			}
+		})
+	</script>
+</html>

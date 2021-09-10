@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Document</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+	
+	</head>
+	<body>
+		<div id="app">
+			<input type="text" :value="str1"/>
+			<p :title="str2+str1">content...</p>
+			<input type="button" value="点击1" onclick="alert(1)"/>
+			<input type="button" value="点击2" v-on:click="fun1"/>
+			<input type="button" value="点击3" onclick="fun2()"/>
+			<input type="button" value="点击4" @click="fun3()"/>
+		</div>
+	</body>
+	<script>
+		function fun2(){
+			alert("3")
+		}
+		var vm = new Vue({
+			el: "#app", 
+			data: {
+				"str1": "aaa",
+				"str2": "bbb",
+				"str3": "ccc",
+			},
+			// methods :表示vuejs 中对于绑定事件函数的定义,可以同时定义多个函数,多个函数之间使用逗号来进行分隔
+			methods:{
+				fun1(){
+					alert("2")
+				},
+				fun3(){
+					alert("4")
+				}
+			}
+			
+		})
+	</script>
+</html>

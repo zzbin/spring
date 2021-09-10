@@ -4,19 +4,22 @@
 		<meta charset="utf-8">
 		<title>Document</title>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+	
 	</head>
 	<body>
 		<div id="app">
-			<span :style="myStyle1">Hello Style</span>
-			<span :style="[myStyle1,myStyle2]">Hello Style2</span>
-		</div>	
+			<a href="http://www.baidu.com" @click="fun1">点击1</a>
+			<a href="http://www.baidu.com" @click.prevent="fun1">点击2</a>
+		</div>
+		
 	</body>
 	<script>
 		var vm = new Vue({
 			el: "#app", 
 			data: {
-				"myStyle1": {color:"red", "font-size": "30px"},
-				"myStyle2": {'font-style':"italic", "background-color": "aqua"},
+				"str1": "aaa",
+				"str2": "bbb",
+				"str3": "ccc",
 			},
 			methods:{
 				fun1(){

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Document</title>
+		<!-- 引入vue.js框架 -->
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+	</head>
+	<body>
+		
+		<div id="app">
+			<p v-for="f in fruitList" :key="f.id">
+				{{f.name}}---------------{{f.price | disCount8}}
+			</p>
+		</div>
+	</body>
+	<script>
+		Vue.filter("disCount8", function(value){
+			return parseInt(value)*0.8
+		});
+		var vm = new Vue({
+			el: "#app", 
+			data: {
+				"fruitList": [
+					{"id":"A0001", "name":"苹果", "price":10},
+					{"id":"A0002", "name":"菠萝", "price":8},
+					{"id":"A0003", "name":"梨子", "price":5},
+				],
+			}
+			
+		})
+	</script>
+</html>

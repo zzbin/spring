@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Document</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<!-- 直接使用插值表达式 引用数组， 通过下标展现所有元素 -->
+			<p>{{cityList[0]}}</p>
+			<p>{{cityList[1]}}</p>
+			<p>{{cityList[2]}}</p>
+			<p>{{cityList[3]}}</p>
+			<p>{{cityList[4]}}</p>
+			<p>-------------------------分割线---------------------------</p>
+			<!-- 使用v-for指令的形式遍历字符串数组 -->
+			<p v-for="city in cityList">
+				{{city}}
+			</p>
+			<p>-------------------------分割线---------------------------</p>
+			<!-- 在以上需求的基础上，遍历所有的元素以及对应的下标 -->
+			<p v-for="(city,index) in cityList">
+				{{index}}:{{city}}
+			</p>
+		</div>	
+	</body>
+	<script>
+		var vm = new Vue({
+			el: "#app", 
+			data: {
+				"cityList": ["北京","上海","广州","深圳","沈阳"],
+			},
+			methods:{
+				fun1(){
+					alert("触发外层div");
+				}
+		
+			}
+			
+		})
+	</script>
+</html>

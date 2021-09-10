@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Document</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<!-- 
+				遍历对象的属性和属性值
+				必须以取出键值对的形式来遍历
+				（value值（属性值），key键（属性名），下标） in 对象
+			 -->
+			<p v-for="(value, key, index) in city1">
+				{{index}}.{{key}}--------{{value}}
+			</p>
+		
+		</div>	
+	</body>
+	<script>
+		var vm = new Vue({
+			el: "#app", 
+			data: {
+				"city1": {id:'A0001',name:"北京"}
+			}
+		})
+	</script>
+</html>
